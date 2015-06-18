@@ -1,0 +1,124 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php
+
+/**
+ * Top menu for store
+ *
+ * @see Mage_Page_Block_Html_Topmenu
+ */
+?>
+
+<?php $_menu = $this->getHtml('level-top'); ?>
+
+<?php if($_menu): ?>
+    <nav id="nav">
+        <ol class="nav-primary">
+            <?php echo $_menu ?>
+        </ol>
+        <ol class="nav-secondary">
+        </ol>
+    </nav>
+<?php endif ?>
+<?php /*
+<?php $_menu = $this->getHtml('level-top') ?>
+
+<?php if($_menu): ?>
+    <nav id="nav">
+            <? //php echo $_menu ?>
+        <ol class="nav-primary">
+        	<?php
+        		$html1 =''; // list of categories
+        		$html2 =''; // sub-category menus
+        		$id = 149; // category id for 'Products' folder
+				$cat = Mage::getModel('catalog/category')->load($id);
+				$subcats = explode(',',$cat->getChildren());
+				$parentCount=0;
+				// Category menu
+				foreach($subcats as $subCatid)
+				{
+					$parentCount++;
+					$parent = Mage::getModel('catalog/category')->load($subCatid);
+					$children = $parent->getChildren();
+					$childArray = explode(',',$children);
+
+					if($parent->getIsActive())
+				  	{
+				  		$hasChildren = count($childArray);
+				  		$class='level0 nav-'.$parentCount;
+				  		if($hasChildren){$class.=' parent';} // add parent class to items with children
+				  		if($subCatid==$subcats[0]){$class.=' first';} // add first class to first list item
+				    	if($subCatid==end($subcats)){$class .=' last';} // add last to last list item
+
+				    	$caturl = $parent->getURL(); // get category url
+				    	$catname = $parent->getName(); // get category name
+				    	$html1 .= '<li class="'.$class.'"><a href="'.$caturl.'" class="level0 has-children">'.$catname.'</a>';
+				    	// If category has children
+				    	if($hasChildren){
+				    		$class ='';
+				    		$class = 'level0 nav-'.$parentCount;
+				  			if($subCatid==$subcats[0]){$class.=' first';}
+				    		if($subCatid==end($subcats)){$class .=' last';}
+				    		$html2 .= '<ul class="'.$class.' ">';
+				    		$row1 ='<li class="row row-1"><ul>';
+        					$row2 ='<li class="row row-2"><ul>';
+				    		$childCount = 0;
+				    		// sub Category Menu
+				    		foreach ($childArray as $child) {
+				    			$class ='level1 nav-'.$parentCount.'-'.$childCount;
+				    			if($child==$childArray[0]){$class .=' first';}
+				    			if($child==end($childArray)){$class .=' last';}
+								$subcat = Mage::getModel('catalog/category')->load($child);
+								if($childCount%2 == 0){
+				    			$row1.='<li class="'.$class.'">';
+				    			$row1.='<a href="'.$subcat->getURL().'" class="level1">';
+				    			$row1.=$subcat->getName().'</a>';
+				    			}
+				    			else{
+				    			$row2.='<li class="'.$class.'">';
+				    			$row2.='<a href="'.$subcat->getURL().'" class="level1">';
+				    			$row2.=$subcat->getName().'</a>';}
+				    			$childCount++;
+				    		}
+				    		$row1 .='</ul></li>';
+        					$row2 .='</ul></li>';
+        					$row3 = '<li class="row row-3"><ul><li><img /></li></ul></li>';
+        					$html2.= $row1.$row2.$row3;
+				    		$html2.="</ul></li>";
+				    	}
+				    $html1 .='</li>';
+				  }
+				}
+				echo $html1;
+				echo "</ol>";?>
+				<ol class="nav-secondary">
+				<?php echo $html2; ?>
+				</ol>
+    </nav>
+<?php endif ?>
+*/

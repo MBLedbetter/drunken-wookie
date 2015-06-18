@@ -1,0 +1,41 @@
+<config>    
+    <modules>
+        <Trends_Trsadmin>
+            <version>0.1.0</version>
+        </Trends_Trsadmin>
+    </modules>
+    <global>
+        <helpers>
+            <trends_trsadmin>
+                <class>Trends_Trsadmin_Helper</class>
+            </trends_trsadmin>
+        </helpers>
+		<blocks>
+			<trsadmin>
+				<class>Trends_Trsadmin_Block</class>
+			</trsadmin>
+		</blocks>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Trends_Trsadmin after="Mage_Adminhtml">Trends_Trsadmin</Trends_Trsadmin>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <trsadmin>
+                <use>standard</use>
+                <args>
+                    <module>Trends_Trsadmin</module>
+                    <frontName>trsadmin</frontName>
+                </args>
+            </trsadmin>
+        </routers>  
+    </frontend>
+</config>   

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <trsadmin_adminhtml_trsadmin_index>
+        <reference name="content">
+            <block type="trsadmin/adminhtml_trsadmin" name="trsadmin" />
+        </reference>
+    </trsadmin_adminhtml_trsadmin_index>
+</layout>

@@ -1,0 +1,35 @@
+<ul class="form-section">
+	<?php
+	$html='';
+	$stateLawPostings ='';
+	$icon ='C:\\xampp\\htdocs\\sites\\magento\\media\\wysiwyg\\arrow-icon.png';
+		//$directory = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+		//$directory .='sites/magento/media/forms/associates/human-resources/forms-documents';
+		$directory = "C:\\xampp\\htdocs\\sites\\magento\\media\\forms\\associates\\human-resources\\forms-documents";
+		//get all files in specified directory
+		$files = glob($directory . "\*");
+ 		foreach($files as $file){
+ 			$subfiles = glob($file."\*");
+ 			$title = str_replace($directory.'\\', '', $file);
+ 			if($title != 'State Law Posting Requirements'){
+	 			$html.= '<li class="form-title">'.$title."</li><li class='form-body'><ul>";
+	 			foreach($subfiles as $subfile){
+	 				$subtitle = str_replace($file.'\\', '', $subfile);
+	 				$subtitle = str_replace('.pdf', '', $subtitle);
+	 				$subtitle = str_replace('.doc', '', $subtitle);
+	 				$subtitle = str_replace('.xlxs', '', $subtitle);
+	 				$subtitle = str_replace('.xls', '', $subtitle);
+	 				$html.= '<li><a href="'.$subfile.'">'.$subtitle.'</a></li>';
+	 			}
+ 				$html.="</ul></li>";
+ 			}
+ 			else{
+ 				$stateLawPostings.= '<li class="form-title">'.$title."</li><li class='form-body'><ul>";
+ 				$stateLawPostings.="<img src='".$icon."'/></ul></li>";
+ 			}
+
+ 		}
+ 		$html .= $stateLawPostings;
+ 		echo $html;
+		?>
+</ul>

@@ -1,0 +1,507 @@
+/*
+*
+* Stylesheet that incorporates and overrides specific elements of styles.css
+* 
+*
+*/
+
+
+/* 
+===== Product View Related Products =====
+*
+* Moves related products from right side to underneath product image
+* Realigns vertical list to horizontal
+*
+*/
+.product-view .block-related
+{
+	float:left;
+	width: 100%;
+}
+
+.product-view .block-related ol li{
+	display:inline;
+	float:left;
+}
+
+.product-view .mini-products-list li{
+	clear:none;
+}
+.product-view .mini-products-list img{
+	display:block;
+	margin:0 auto;
+}
+.product-view .mini-products-list .product-image{
+	float:none;
+	min-width:none;
+}
+.products-grid .product-name a, .products-list .product-name a {
+	font-size:16px;
+  font-weight: bold;
+}
+/* ===== Catalog images ===== */
+.product-image{
+	border: none;
+}
+.products-list > li .product-image img{
+	max-height: 250px;
+}
+/* ===== Page Header ===== */
+.page-header
+{
+	background-color: #fff;
+	border-right:1px solid #222;
+	border-left:1px solid #222;
+}
+.header-language-background
+{
+	background-color: #FFF;
+	color:#13345f;
+}
+#header-nav
+{
+	border-bottom: none;
+	text-align: center;
+	border: 3px solid #94c2ff;
+}
+div.wp-custom-menu-popup{
+	background-color: #ffffff;
+	border: 2px solid #94c2ff;
+	border-top:dashed 1px #fafafa;
+}
+/*
+.nav-primary
+{
+	margin-top:5px;
+	background-color: #94c2ff;
+}
+.nav-primary li
+{
+	display:inline-block;
+	padding: 5px 0;
+}
+.nav-primary>ul.level0{
+	float:left;
+}
+#nav>ol.nav-secondary{
+	background-color: #fff;
+	position:absolute;
+	top:164px;
+	width: 100%;
+	z-index: 20;
+}
+.nav-secondary ul{
+	display:none;
+	width:100%;
+
+}
+.nav-secondary{
+	border:2px solid #94c2ff;
+}
+.nav-secondary ul.level0 li.row ul li{
+	padding:5px 15px;
+	text-align: left;
+	font-size:18px;
+}
+@media only screen and (max-width: 780px){
+	.nav-primary
+	{
+		margin-top:0;
+		background-color: #FFF;
+	}
+	.nav-primary li
+	{
+		padding: 0;
+	}
+}
+
+
+@media only screen and (min-width: 771px){
+	.nav-primary li.level0 ul {
+		background-color:#FFF;
+		border:4px solid #94c2ff;
+		position:fixed;
+		left:31px;
+		top:186px;
+		width:974px;
+	}
+	.nav-primary li.level0 ul li {
+		float:left;
+		position: relative;
+		width: 33%;
+	}
+	.nav-primary li.level1 a {
+		border: none;
+	}
+	.nav-primary a.level0{
+		padding:0 20px;
+	}
+}
+
+#nav
+{
+	border-top: 2px solid #13345f;
+}
+*/
+.logo img
+{
+	max-width:70%;
+}
+#header-search 
+{
+	top:40px;
+	right:30%;
+	width:42%;
+}
+.page-header .skip-link
+{
+	background: none;
+}
+.account-cart-wrapper
+{
+	top: 40px;
+}
+
+.header-language-background
+{
+	max-width: 1260px;
+	margin: 0px auto;
+	border-right:1px solid #222;
+	border-left:1px solid #222;
+}
+/*
+=====	Page Body =====
+*/
+.main-container
+{
+	background-color: #FFF;
+	border-right:1px solid #222;
+	border-left:1px solid #222;
+}
+
+/*
+===== Page Footer =====
+*/
+.footer-container
+{
+	background-color: #fff;
+	border-right:1px solid #222;
+	border-left:1px solid #222;
+}
+
+.twitter-box
+{
+	float:left;border-right: 1px dashed #CCC;
+	padding:10px;
+}
+.tc-box
+{
+	float:left;
+	padding:10px;
+}
+.footer .links li{
+	clear:both;
+	float:left;
+}
+/*
+===== Home Page =====
+*/
+
+/* Styling for License navigation on home page */
+.home-licenses
+{
+	float:left;
+	width:100%;
+	text-align: center;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+.home-licenses ul li{
+	list-style-type: none;
+	display:inline-block;
+	float:left;
+}
+.home-licenses img{
+}
+/* Styling for Home page what's new section */
+.main-new
+{
+	clear: both;text-decoration: none;
+	position: relative;
+	display: block;
+	color: #636363;
+	line-height: 30px;
+	font-family: "Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
+}
+/* Styling for home page grid */
+
+.main .main-grid .cell-hover
+{
+	background-image: url("http://localhost/sites/magento/media/wysiwyg/wysiwyg/cell-hover-bg.png");
+	color:#FFF;
+	font-family: "Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	z-index: 20;
+}
+.main .main-grid .grid-1 {
+	height:294px;
+	width:368px;
+}
+.main .main-grid .grid-2 {
+	height:147px;
+	width:184px;
+}
+/*
+.main .main-grid .grid-1 .cell-hover
+{
+	font-size: 36px;
+	padding-top: 120px;
+	height:294px;
+	width:368px;
+}
+.main .main-grid .grid-2 .cell-hover
+{
+	font-size: 24px;
+	padding-top: 40px;
+	height:147px;
+	width:184px;
+}*/
+.main .main-grid
+{
+	overflow: hidden;
+	margin-bottom:10px;
+	height:440px;
+	border:2px solid #000;
+}
+.main-grid table{
+	height:441px;
+	float:left;
+}
+.main .main-grid .main-grid-slider
+{
+	width:3600px;
+}
+
+.main-grid .grid-cell
+{
+	background-color: #CCC;
+}
+.main-grid-slider table.grid-table-first td{
+	/* display:none; */
+	/*position:relative;*/
+	background-color:#000000;
+}
+
+/* New Products Widget */
+
+.widget-new-products ul li{
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+.widget-new-products{
+	text-align: center;
+	border-bottom: 1px solid #CCC;
+}
+.widget-new-products h2{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCC;
+}
+
+.wrapper
+{
+	background-image: url("http://localhost/sites/magento/media/wysiwyg/wysiwyg/background.gif");
+	background-repeat: repeat;
+	background-color:#CCC;
+}
+
+/* Product Page */
+
+.product-collateral{
+	float:right;
+	clear:none;
+	width:50%;
+}
+.product-view .product-img-box .product-image img{
+	max-height: 550px;
+}
+
+.product-view .block-related .product-details
+{
+	margin:0;
+	clear:both;
+	max-width:110px;
+	text-align: center;
+}
+.product-view .block-related input{
+	display:none;
+}
+.block-related .product{
+
+  border: 1px solid #CCC;
+  padding: 5px;
+}
+@media screen and (max-width: 880px) {
+#block-related .item{
+	width:100%;
+}
+#block-related .product{
+	margin-left: 0;
+	margin-right:15px;
+	height:88px;
+}
+#block-related img{
+	float:left;
+}
+.product-view .block-related .product-details
+{
+	margin:0;
+	clear:none;
+	max-width:none;
+	text-align: left;
+}
+}
+
+@media screen and (max-width: 770px) {
+.product-collateral{
+	float:left;
+	clear:both;
+	width:100%;
+}
+}
+.product-collateral .toggle-tabs li.current > span{
+	z-index:0;
+}
+.product-collateral > dl > dd.tab-container{
+	display:block;
+}
+.catalog-product-view .block-related .block-subtitle{
+	display:none;
+}
+.catalog-category{
+  border-top: 1px solid #CCC;
+	font-size: 15px;
+}
+.catalog-sku{
+	font-size:14px;
+	color:#94c2ff;
+}
+
+
+
+/* ---- Navigation styling ---- */
+.home-sub-nav{
+	width: 100%;
+	padding-top:2px;
+}
+.home-sub-nav a{
+	position: relative;
+	bottom: 7px;
+	color:#636363;
+	font-weight: bold;
+}
+.home-sub-nav a:hover{
+	text-decoration: none;
+}
+.home-sub-nav ul,.home-sub-nav li{
+	display:inline-block;
+}
+.nav-secondary>ul>li.row>ul,.nav-secondary>li.row>ul>li{
+	display:inline-block;
+}
+.nav-secondary>ul>li.row>ul{
+	border-right: 1px dashed #CCC;
+	width:33%;
+	float:left;
+}
+
+.nav-secondary>ul>li.row{
+	/* border-bottom: 3px solid #94c2ff; */
+}
+
+body.cms-home .main-container{
+	padding-top:5px !important;
+}
+@media screen and (max-width: 770px) {
+.nav-primary>li{
+	width:100%;
+	clear: both;
+}
+.home-sub-nav{
+	display:none;
+}
+}
+
+/* --- Associate Forms --- */
+.cms-page-view .std li.form-title {
+	background-color: #94c2ff;
+	color:#13345f;
+	cursor: pointer;
+	margin-top:2px;
+	padding:2px 5px;
+}
+.form-section li{
+	list-style-type: none;
+}
+.form-section ul{
+	padding:2px 0;
+}
+
+ul.form-section li.form-body{
+	display: none;
+}
+
+/* ---- Trade Show Page ---- */
+
+.trade-show-block{
+	border:1px solid #CCC;
+	margin-bottom:10px;
+	max-width: 550px;
+
+}
+.trade-show-block img{
+	float: left;
+	width:150px;
+
+}
+.trade-show-content{
+	display: block;
+	padding:15px;
+}
+.cms-page-view .std .trade-show-content p{
+	line-height: 10px;
+}
+
+/* ---- Employment Page ---- */
+/* ---- Event Page---- */
+.trailer{
+	width: 100%;
+	background-color: #000;
+	padding:5px 0;
+}
+
+/* --- list event header --- */
+.list-header{
+	display:block;
+	text-align:center;
+	width:100%;
+}
+.list-header img{
+	float:left;
+	width:50px;
+}
+.toolbar{
+	clear:both;
+}
+.list-header>ul{
+	list-style-type: none;
+	text-align: center;
+}
+.list-header>ul>li{
+	display: inline-block;
+	padding: 5px;
+}

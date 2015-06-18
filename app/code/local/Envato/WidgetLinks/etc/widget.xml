@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<widgets>
+  <widgetlinks_links type="widgetlinks/links" translate="name description" module="widgetlinks">
+    <name>Event Header Lists</name>
+    <description>Modify Header Lists for Events</description>
+    <parameters>
+      <link_options>
+        <label>Link Options</label>
+        <visible>1</visible>
+        <required>1</required>
+        <type>multiselect</type>
+        <source_model>widgetlinks/options</source_model>
+      </link_options>
+    </parameters>
+  </widgetlinks_links>
+</widgets>

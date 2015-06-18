@@ -1,0 +1,32 @@
+<config>
+    <menu>
+        <trends translate="title" module="trends_trsadmin">
+            <title>TRS</title>
+            <sort_order>1</sort_order>
+            <children>
+                <example>
+                    <title>Weekly Bulletin</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/trsadmin/index</action>
+                </example>
+            </children>
+        </trends>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>                
+                    <trends translate="title" module="trends_trsadmin">
+                        <title>Top Level Trends Menu Item</title>
+                        <sort_order>1</sort_order>
+                        <children>
+                            <example>
+                                <title>Weekly Bulletin Menu Item</title>
+                            </example>
+                        </children>
+                    </trends>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config> 
