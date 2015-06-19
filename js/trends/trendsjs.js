@@ -2,14 +2,19 @@
 jQuery( document ).ready(function() {
 
 /* === Nav Menu === */
-
 	while(parseInt(jQuery("#custommenu").height())>40){
 		removeNavCell();
 	}
 
-
 /* === End Nav Menu=== */
 
+/* Associates Documents Functionality */
+
+jQuery('li.form-title').click(function(){
+	jQuery(this).next().fadeToggle('slow');
+});
+
+	appendMore();
 });
 
 /* --- Menu width detection --- */
@@ -26,6 +31,11 @@ function addNavCell()
 	//jQuery("#nav>.nav-primary>li:nth-last-child(2)>a").css('text-transform','Uppercase');
 }
 
+function appendMore(){
+	jQuery('div#menu19').attr('onmouseover', "wpShowMenuPopup(this, event, 'popup19');");
+	jQuery('div#menu19').attr('onmouseout', "wpHideMenuPopup(this, event, 'popup19', 'menu19')");
+
+}
 
 function detectWidth()
 {
@@ -49,10 +59,6 @@ function removeNavCell()
 }
 
 /* === End Nav Menu functions === */
-
-jQuery('li.form-title').click(function(){
-	jQuery(this).next().fadeIn('slow');
-});
 
 
 
