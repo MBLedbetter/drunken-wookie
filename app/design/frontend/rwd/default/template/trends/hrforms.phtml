@@ -23,12 +23,30 @@
 	 			}
  				$html.="</ul></li>";
  			}
- 			else{
- 				$stateLawPostings.= '<li class="form-title">'.$title."</li><li class='form-body'><ul>";
+
+ 		}
+ 		$directory.="\\State Law Posting Requirements";
+ 		$stateLawPostings.= '<li class="form-title">State Law Posting Requirements</li><li class="form-body"><ul>';
+		$files = glob($directory . "\*");
+ 		foreach($files as $file){
+ 			$subfiles = glob($file."\*");
+ 			$title = str_replace($directory.'\\', '', $file);
+ 			if($title != 'State Law Posting Requirements'){
+	 			$stateLawPostings.= '<li class="form-state-title">'.$title."</li><li class='form-state-body'><ul>";
+	 			foreach($subfiles as $subfile){
+	 				$subtitle = str_replace($file.'\\', '', $subfile);
+	 				$subtitle = str_replace('.pdf', '', $subtitle);
+	 				$subtitle = str_replace('.doc', '', $subtitle);
+	 				$subtitle = str_replace('.xlxs', '', $subtitle);
+	 				$subtitle = str_replace('.xls', '', $subtitle);
+	 				$stateLawPostings.= '<li><a href="'.$subfile.'">'.$subtitle.'</a></li>';
+	 			}
  				$stateLawPostings.="</ul></li>";
  			}
 
  		}
+ 		$stateLawPostings.="</ul></li>";
+ 			
  		$html .= $stateLawPostings;
  		echo $html;
 		?>
