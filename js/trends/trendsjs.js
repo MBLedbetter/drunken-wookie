@@ -1,9 +1,12 @@
 
 jQuery( document ).ready(function() {
 
+	//window.currentTarget = (jQuery("#custommenu").find(".menu").length)-3;
+	window.currentTarget = 3;
 /* === Nav Menu === */
+
 	while(parseInt(jQuery("#custommenu").height())>40){
-		removeNavCell();
+		removeNavCell(currentTarget);
 	}
 
 /* === End Nav Menu=== */
@@ -24,17 +27,17 @@ jQuery( window ).resize(function(){
 
 /* === Nav menu functions === */
 
-function addNavCell()
+function addNavCell(target)
 {
 	jQuery("#nav>.nav-primary>li.last>ul>li:first").appendTo(jQuery('#nav>.nav-primary')).insertBefore('#nav>ol.nav-primary>li.last');
-
-	//jQuery("#nav>.nav-primary>li:nth-last-child(2)>a").css('text-transform','Uppercase');
+	currentTarget--;
 }
 
 function appendMore(){
 	jQuery('div#menu19').attr('onmouseover', "wpShowMenuPopup(this, event, 'popup19');");
 	jQuery('div#menu19').attr('onmouseout', "wpHideMenuPopup(this, event, 'popup19', 'menu19')");
-
+	jQuery('#custommenu').prepend('<div id="popup19" class="wp-custom-menu-popup" onmouseout="wpHideMenuPopup(this, event, \'popup19\')" onmouseover="wpShowMenuPopup(this, event,\'popup19\')"></div>');
+	jQuery('#popup19').prepend('<div class="block1"><div class="column first last odd"><div class="itemMenu level1"></div></div><div class="clearBoth"></div></div>');
 }
 
 function detectWidth()
@@ -42,20 +45,19 @@ function detectWidth()
 
 	if((jQuery("#custommenu").height()>40)&&(jQuery(window).width()>770))
 	{
-		removeNavCell();
+		removeNavCell(currentTarget);
 	}
 
 	if((jQuery(window).width()>1224)&&((jQuery("#nav>ol.nav-primary li").not("#nav>ol.nav-primary li ul li").length)<8))
 	{
-		addNavCell();
+		addNavCell(currentTarget);
 	}
 }
-
-
-function removeNavCell()
+function removeNavCell(target)
 {
-	// jQuery("#custommenu>div:nth-last-child(2)").prependTo(jQuery('#custommenu>#popup9'));
-	jQuery("#custommenu>div:nth-last-child(3)").remove();
+	jQuery("#popup19 div.itemMenu").prepend('<a class="itemMenuName level1" href="'+jQuery("#custommenu>div:nth-last-child("+target+") a.level0").attr('rel')+'"><span>'+jQuery("#custommenu>div:nth-last-child("+target+")>div>a.level0 span").text()+'</span></a>');
+	jQuery("#custommenu>div:nth-last-child("+target+")").css('display','none');
+	currentTarget ++;
 }
 
 /* === End Nav Menu functions === */

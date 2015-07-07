@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Trends_Customer>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Trends_Customer>
+    </modules>
+</config>
