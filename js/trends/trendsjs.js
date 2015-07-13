@@ -1,30 +1,32 @@
-
+/*
 jQuery( document ).ready(function() {
 
 	//window.currentTarget = (jQuery("#custommenu").find(".menu").length)-3;
 	window.currentTarget = 3;
+	*/
 /* === Nav Menu === */
-
+/*
 	while(parseInt(jQuery("#custommenu").height())>40){
 		removeNavCell(currentTarget);
 	}
-
+*/
 /* === End Nav Menu=== */
 
 /* Associates Documents Functionality */
-
+/*
 jQuery('li.form-title').click(function(){
 	jQuery(this).next().fadeToggle('slow');
 });
 
 	appendMore();
 });
-
+*/
 /* --- Menu width detection --- */
+/*
 jQuery( window ).resize(function(){
 	detectWidth();
 });
-
+*/
 /* === Nav menu functions === */
 
 function addNavCell(target)
