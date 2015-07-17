@@ -43,7 +43,12 @@
                     </a>
                     <div class="product-info">
                         <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>)"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></h3>
-                        <span class="product-sku"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getSku() , 'sku') ?></span>
+                        <div class="catalog-category">
+                            <?php echo $description = Mage::getModel('catalog/product')->load($_product->getId())->getMetaDescription();?>
+                        </div>
+                        <div class="catalog-sku">
+                        <?php echo $sku = Mage::getModel('catalog/product')->load($_product->getId())->getSku();?>
+                        </div>
                         <?php echo $this->getPriceHtml($_product, true, '-widget-new-grid') ?>
                         <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                         <div class="actions">

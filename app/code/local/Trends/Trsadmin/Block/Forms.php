@@ -6,7 +6,7 @@ class Trends_Trsadmin_Block_Forms extends Mage_Core_Block_Abstract implements Ma
   * @return string
   */
   protected function _toHtml() {
-    $html = '';
+    $html = 'Test';
      
     return $html;
   }

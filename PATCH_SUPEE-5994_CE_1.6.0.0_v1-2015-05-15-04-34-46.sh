@@ -64,7 +64,7 @@ then
 fi
 
 # 5. File pathes
-CURRENT_DIR=`$PWD_BIN`/
+CURRENT_DIR=`/c/xampp/htdocs/magento/sites`/
 APP_ETC_DIR=`echo "$CURRENT_DIR""app/etc/"`
 APPLIED_PATCHES_LIST_FILE=`echo "$APP_ETC_DIR""applied.patches.list"`
 
